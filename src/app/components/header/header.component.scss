@@ -1,0 +1,246 @@
+@use 'src/variables';
+@use 'src/mixins';
+
+header{
+    background: variables.$gradient;
+    @include mixins.container(unset, unset, variables.$bannerMobile, 0 0 100px);
+    position: relative;
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+    @include mixins.container(unset, unset, variables.$bannerTablet, 0 0 100px);
+    }
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+    @include mixins.container(unset, unset, variables.$bannerDesktop, 0 0 150px);
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+    @include mixins.container(unset, unset, variables.$bannerLargeDesktop, 0 0 200px);
+    }
+    }
+}
+.contentLogoLogin{
+    @include mixins.flexBox(row, space-between);
+    @include mixins.position(relative, 5px);
+    padding: 5px;
+    & div{
+        @include mixins.flexBox(column, flex-start, flex-start);
+        & img{
+            width: 50px;
+            @include mixins.mediaQuery(variables.$breakPointTablet){
+                width: 70px;
+                }
+            @include mixins.mediaQuery(variables.$breakPointDesktop){
+                width: 100px;
+                }
+            @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                width: 150px;
+                }
+            }
+        }
+        & p{
+            font-size: 8px;
+            color: variables.$colorSecondary;
+            @include mixins.mediaQuery(variables.$breakPointTablet){
+                font-size: 10px;
+            }
+            @include mixins.mediaQuery(variables.$breakPointDesktop){
+                font-size: 14px;
+            }
+            @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                font-size: 18px;
+            }
+        }
+        & Form{
+            @include mixins.flexBox(column, flex-start, flex-end);
+            & input{
+                width: 50%;
+                border: variables.$borderBox;
+                border-radius: variables.$borderRadiusButton;
+                font-size: 10px;
+                padding-left: 2px;
+                margin-bottom: 2px;
+                @include mixins.mediaQuery(variables.$breakPointDesktop){
+                    width: 100%;
+                    font-size: 14px;
+                }
+                @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                    width: 100%;
+                    font-size: 18px;
+                }
+            }
+            & button{
+                font-size: 9px;
+                @include mixins.container(variables.$colorTertiary, unset, unset, unset, variables.$paddingButton, variables.$borderBox, variables.$borderRadiusButton);
+                color: variables.$colorSecondary;
+                @include mixins.mediaQuery(variables.$breakPointDesktop){
+                    font-size: 14px;
+                }
+                @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+.contentProfile{
+    @include mixins.flexBox(column, unset, center);
+    @include mixins.position(relative, 45px);
+    width: 140px;
+    padding-left: 5px;
+    font-size: 10px;
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+        font-size: variables.$fontSizeText;
+        padding-left: 10px;
+        width: 200px;
+    }
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+        font-size: variables.$fontSizeText;
+        padding-left: 10px;
+        width: 200px;
+    }
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        font-size: variables.$fontSizeParagraph;
+        padding-left: 10px;
+        width: 250px;
+    }
+    & img{
+        width: 80px;
+        border-radius: variables.$borderRadiusAvatar;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            width: 100px;
+            margin-top: 20%;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            width: 120px;
+            margin-top: 60%;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            width: 150px;
+            margin-top: 75%;
+        }
+    }
+    & a{
+        width: 12px;
+        font-size: 12px;
+        color: variables.$colorTertiary;
+        margin-left: 120px;
+        padding: unset;
+        //display: none;
+    }
+}
+.clave{
+    width: 90px;
+    margin-right: 2px;
+    @include mixins.position(absolute, unset, unset, 0, 210px);
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+        width: 120px;
+        @include mixins.position(absolute, unset, unset, 0, 480px);
+    }
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+        width: 180px;
+        @include mixins.position(absolute, 158px, unset, 0, 844px);
+    }
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        width: 250px;
+        @include mixins.position(absolute, 200px, unset, 0, calc(100% - 250px));
+    }
+}
+.contenedor2{
+    .overlay2{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .overlay2.active{
+        visibility: visible;
+    }
+    .popup2{
+        background: #f8f8f8;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+        border-radius: 3px;
+        font-family: variables.$fontTitle;
+        padding: 20px;
+        text-align: center;
+        width: 550px;
+        transition: .3s ease all;
+        transform: scale(.7);
+        opacity: 0;
+    }
+    .popup2 .btn-cerrar-popup2{
+        font-size: 18px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        transition: .3s ease all;
+    }
+    .popup2 .btn-cerrar-popup2:hover{
+        color: #000;
+    }
+    .popup2 h3{
+        font-size: 28px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+    .popup2 form .contenedor2-inputs{
+        opacity: 0;
+    }
+    .popup2 form .contenedor2-inputs input{
+        width: 90%;
+        margin-bottom: 15px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+    }
+    .popup2 form .btn-submit{
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #FFF;
+        background: variables.$colorTertiary;
+        border-radius: 3px;
+        font-family: variables.$fontSubTitle;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+    .popup2 form .btn-submit:hover{
+        background: rgba(94,125,227,.9);
+    }
+    .popup2.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .popup2.active h3{
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+    .popup2.active .contenedor2-inputs{
+        animation: entradaInputs 1s ease 1s forwards;
+    }
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        }
+}

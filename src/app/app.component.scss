@@ -1,0 +1,17 @@
+@use 'src/variables';
+@use 'src/mixins';
+
+main{
+    background-color: variables.$colorSecondary;
+    color: variables.$colorPrimary;
+    width: variables.$screenSizeMobile;
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+    width: variables.$screenSizeTablet;
+    }
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+    width: variables.$screenSizeDesktop;
+    }
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+    width: variables.$screenSizeLargeDesktop;
+    }
+}

@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'variables';
+@use 'mixins';
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: variables.$colorPrimary;
+    font-family: variables.$fontParagraph;
+    @include mixins.flexBox(column, center, center);
+}

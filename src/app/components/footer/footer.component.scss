@@ -1,0 +1,19 @@
+@use 'src/variables';
+@use 'src/mixins';
+
+footer{
+    background: variables.$gradient;
+    font-size: variables.$fontSizeTextMobile;
+    text-align: center;
+    margin: 8px 0 5px;
+    color: variables.$colorSecondary;
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+        font-size: variables.$fontSizeTextTablet;
+    }
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+        font-size: variables.$fontSizeText;
+    }
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        font-size: variables.$fontSizeParagraph;
+    }
+}

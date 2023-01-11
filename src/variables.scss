@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+// family font 
+$fontTitle: 'Roboto', sans-serif;
+$fontSubTitle: 'Roboto Condensed', sans-serif;
+$fontParagraph: 'Roboto Slab', serif;
+
+// color
+$colorPrimary: #000;
+$colorSecondary: #fff;
+$colorTertiary: rgb(57, 6, 176);
+$colorQuaternary: rgb(55, 39, 235);
+$colorQuinary: #c86eec;
+
+// font size
+$fontSizeTitle: 32px;
+$fontSizeSubTitle: 24px;
+$fontSizeLargeParagraph: 20px;
+$fontSizeParagraph: 16px;
+$fontSizeText: 14px;
+$fontSizeTitleTablet: 24px;
+$fontSizeSubTitleTablet: 18px;
+$fontSizeParagraphTablet: 14px;
+$fontSizeTextTablet: 12px;
+$fontSizeTitleMobile: 18px;
+$fontSizeSubtitleMobile: 14px;
+$fontSizeParagraphMobile: 12px;
+$fontSizeTextMobile: 10px;
+
+// font weight
+$fontWeightTitle: 700;
+$fontWeightSubTitle: 500;
+$fontWeightParagraph: 400;
+$fontWeightBold: 300;
+
+// border radius
+$borderRadiusButton: 5px;
+$borderRadiusAvatar: 50%;
+
+// border box
+$borderBox: 1px solid #000;
+
+// break point
+$breakPointMobile: 300px;
+$breakPointTablet: 600px;
+$breakPointDesktop: 1024px;
+$breakPointLargeDesktop: 1900px;
+
+// screen size
+$screenSizeMobile: 300px;
+$screenSizeTablet: 600px;
+$screenSizeDesktop: 1024px;
+$screenSizeLargeDesktop: 100%;
+
+// padding
+$paddingButton: 2px 5px;
+
+// background color
+$gradient: -webkit-linear-gradient(top left, rgba(0, 0, 255, .9), rgba(255, 0, 0, .9));
+
+// height
+$bannerMobile: 150px;
+$bannerTablet: 200px;
+$bannerDesktop: 300px;
+$bannerLargeDesktop: 400px;
