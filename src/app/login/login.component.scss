@@ -1,0 +1,41 @@
+@use 'src/variables';
+@use 'src/mixins';
+
+div{
+    width: 15%;
+    position: absolute;
+    z-index: 1;
+    right: 125px;
+& Form{
+    @include mixins.position(relative, 5px);
+    padding: 5px;
+        @include mixins.flexBox(column, unset, flex-end);
+            & input{
+                width: 50%;
+                border: variables.$borderBox;
+                border-radius: variables.$borderRadiusButton;
+                font-size: 10px;
+                padding-left: 2px;
+                margin-bottom: 2px;
+                @include mixins.mediaQuery(variables.$breakPointDesktop){
+                    width: 100%;
+                    font-size: 14px;
+                }
+                @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                    width: 100%;
+                    font-size: 18px;
+                }
+            }
+            & button{
+                font-size: 9px;
+                @include mixins.container(variables.$colorTertiary, unset, unset, unset, variables.$paddingButton, variables.$borderBox, variables.$borderRadiusButton);
+                color: variables.$colorSecondary;
+                @include mixins.mediaQuery(variables.$breakPointDesktop){
+                    font-size: 14px;
+                }
+                @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                    font-size: 18px;
+                }
+            }
+        }
+    }
