@@ -9,7 +9,8 @@ import { SectionComponent } from './components/section/section.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing';
+
 
 @NgModule({
   declarations: [
@@ -18,12 +19,11 @@ import { routing } from './app.routing';
     FooterComponent,
     NavComponent,
     HeaderComponent,
-    SectionComponent,
-    LoginComponent
+    SectionComponent
   ],
   imports: [
     BrowserModule,
-    routing,
+    AppRoutingModule,
     FormsModule,
     HttpClientModule
   ],
