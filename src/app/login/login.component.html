@@ -1,10 +1,45 @@
 <div>
     <form action="#">
-        <input name="username" class="form-control" placeholder="Email" type="email" [(ngModel)]="username" required autofocus>
-        <input name="password"type="password" class="form-control"  placeholder="Password" [(ngModel)]="password" required>
+        <input class="log" name="username" class="form-control" 
+        placeholder="Email" type="email" [(ngModel)]="username" required autofocus>
+
+        <input class="log" name="password"type="password" class="form-control"  
+        placeholder="Password" [(ngModel)]="password" required>
+
+        <button type="submit" id="boton" onclick="Login_logout()" value="login" 
+        (click)="login()">Login</button>
+    </form>
     <div>
         {{loginerror}}
     </div>
-        <button type="submit" (click)="login()">Login</button>
-    </form>
 </div>
+<script src="login.component.ts">
+    
+ function Mostrar(){
+    //mostrar formulario login
+    document.getElementsByClassName("log").style.display = "block";
+    //ocultar botones edicion
+    //cambiar nombre de botón a login
+    document.getElementById("boton").value = "login";
+    
+}
+
+function Ocultar(){
+    //ocultar formulario login
+    document.getElementsByClassName("log").style.display = "none";
+    //mostrar botones edicion
+    //cambiar nombre de botón a logout
+    document.getElementById("boton").value = "logout"
+}
+
+function Login_logout(){
+var log = document.getElementsByClassName("log");
+if (log.style.display == "block"){
+    Ocultar();
+    } else {
+    if (log.style.display == "none"){
+        Mostrar();
+        }
+    }
+}
+</script>

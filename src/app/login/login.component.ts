@@ -29,8 +29,9 @@ export class LoginComponent implements OnInit{
       else {
         this.loginerror = "";
         this.LoginService.setToken(data.id);
-        this.router.navigate(['./app.component.html'])
+        this.router.navigate(['./src/index.html'])
       }
     });
     }
   }
+  

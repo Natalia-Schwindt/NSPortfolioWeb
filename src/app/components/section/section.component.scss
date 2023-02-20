@@ -16,7 +16,10 @@
         @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
             margin: 20px 0;
         }
-    } 
+    }
+    & a{
+        //display: none;
+    }
 }
 .contenedor3{
     .overlay3{

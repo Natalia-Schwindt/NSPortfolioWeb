@@ -37,6 +37,5 @@ export class LoginService {
     const token = this.getToken();
     return token;
   }
-  ngOnInit(): void {
-  }
+ 
 }
