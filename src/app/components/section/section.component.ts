@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-section',
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.scss']
 })
-export class SectionComponent {
+export class SectionComponent implements OnInit {
+ loggedIn: boolean = false;
 
+    constructor() {}
+
+    ngOnInit(): void {}
 }
 document.addEventListener('DOMContentLoaded', function() {
   var  btnAbrirPopup3 = document.getElementById('btn-abrir-popup3'),

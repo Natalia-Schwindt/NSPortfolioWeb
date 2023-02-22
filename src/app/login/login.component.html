@@ -1,24 +1,25 @@
-<div>
-    <form action="#">
+<div *ngIf="!loggedIn">
+    <form action="#" *ngIf="!loggedIn">
         <input class="log" name="username" class="form-control" 
         placeholder="Email" type="email" [(ngModel)]="username" required autofocus>
 
         <input class="log" name="password"type="password" class="form-control"  
-        placeholder="Password" [(ngModel)]="password" required>
-
-        <button type="submit" id="boton" onclick="Login_logout()" value="login" 
-        (click)="login()">Login</button>
+        placeholder="Password" [(ngModel)]="password" required> 
     </form>
-    <div>
+     <div>
         {{loginerror}}
     </div>
 </div>
+<div>
+    <button type="button" (click)="login()" [value]="loginButtonText">{{ loginButtonText }}</button>
+</div>
 <script src="login.component.ts">
-    
- function Mostrar(){
+
+    /*function Mostrar(){
     //mostrar formulario login
     document.getElementsByClassName("log").style.display = "block";
     //ocultar botones edicion
+    document.getElementsByClassName("").style.display = "none";
     //cambiar nombre de botón a login
     document.getElementById("boton").value = "login";
     
@@ -34,12 +35,12 @@ function Ocultar(){
 
 function Login_logout(){
 var log = document.getElementsByClassName("log");
-if (log.style.display == "block"){
+if (log.style.display === "block"){
     Ocultar();
     } else {
-    if (log.style.display == "none"){
+    if (log.style.display === "none"){
         Mostrar();
         }
     }
-}
+}*/
 </script>

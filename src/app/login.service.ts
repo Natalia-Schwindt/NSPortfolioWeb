@@ -17,7 +17,7 @@ export class LoginService {
     return this.http.post(this.url+"login", User);
   }
 
-    getUser(id:number):Observable<any>{
+  getUser(id:number):Observable<any>{
       return this.http.get(this.url+"/"+id);
   }
 

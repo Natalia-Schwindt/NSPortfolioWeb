@@ -1,10 +1,10 @@
 <section>
     <div class="sectionHeader">
         <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
-        <div>
-            <a href="#" class="btn-abrir-popup3" id="btn-abrir-popup3"><i class="fa-solid fa-plus"></i></a>
-            <a href="#" class="btn-abrir-popup4" id="btn-abrir-popup4"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" class="btn-abrir-popup5" id="btn-abrir-popup5"><i class="fa-solid fa-trash-can"></i></a>
+        <div *ngIf="loggedIn">
+            <a href="#" class="log" class="btn-abrir-popup3" id="btn-abrir-popup3"><i class="fa-solid fa-plus"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup4" id="btn-abrir-popup4"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup5" id="btn-abrir-popup5"><i class="fa-solid fa-trash-can"></i></a>
         </div>
     </div>
     <div class="contenedor3">
@@ -96,10 +96,10 @@
 <section>
     <div class="sectionHeader">
         <h2><i class="fa-solid fa-laptop-code"></i> Experiencia Laboral</h2>
-        <div>
-            <a href="#" class="btn-abrir-popup6" id="btn-abrir-popup6"><i class="fa-solid fa-plus"></i></a>
-            <a href="#" class="btn-abrir-popup7" id="btn-abrir-popup7"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" class="btn-abrir-popup8" id="btn-abrir-popup8"><i class="fa-solid fa-trash-can"></i></a>
+        <div *ngIf="loggedIn">
+            <a href="#" class="log" class="btn-abrir-popup6" id="btn-abrir-popup6"><i class="fa-solid fa-plus"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup7" id="btn-abrir-popup7"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup8" id="btn-abrir-popup8"><i class="fa-solid fa-trash-can"></i></a>
         </div>
     </div>
     <div class="contenedor6">
@@ -179,10 +179,10 @@
 <section>
     <div class="sectionHeader">
         <h2><i class="fa-solid fa-users"></i> Hard Skills & Soft Skills</h2>
-        <div>
-            <a href="#" class="btn-abrir-popup9" id="btn-abrir-popup9"><i class="fa-solid fa-plus"></i></a>
-            <a href="#" class="btn-abrir-popup10" id="btn-abrir-popup10"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" class="btn-abrir-popup11" id="btn-abrir-popup11"><i class="fa-solid fa-trash-can"></i></a>
+        <div *ngIf="loggedIn">
+            <a href="#" class="log" class="btn-abrir-popup9" id="btn-abrir-popup9"><i class="fa-solid fa-plus"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup10" id="btn-abrir-popup10"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup11" id="btn-abrir-popup11"><i class="fa-solid fa-trash-can"></i></a>
         </div>
     </div>
     <div class="contenedor9">
@@ -291,10 +291,10 @@
 <section>
     <div class="sectionHeader">
         <h2><i class="fa-solid fa-code"></i> Proyectos</h2>
-        <div>
-            <a href="#" title="e-mail" id="btn-abrir-popup12"><i class="fa-solid fa-plus"></i></a>
-            <a href="#" title="e-mail" id="btn-abrir-popup13"><i class="fa-solid fa-pencil"></i></a>
-            <a href="#" title="e-mail" id="btn-abrir-popup14"><i class="fa-solid fa-trash-can"></i></a>
+        <div *ngIf="loggedIn">
+            <a href="#" class="log" title="e-mail" id="btn-abrir-popup12"><i class="fa-solid fa-plus"></i></a>
+            <a href="#" class="log" title="e-mail" id="btn-abrir-popup13"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="log" title="e-mail" id="btn-abrir-popup14"><i class="fa-solid fa-trash-can"></i></a>
         </div>
     </div>
     <div class="contenedor12">
@@ -372,4 +372,34 @@
         </div>
     </div>
 </section>
-<script src="section.component.ts"></script>
+<script src="section.component.ts">
+    /*function Mostrar(){
+    //mostrar formulario login
+    document.getElementsByClassName("log").style.display = "block";
+    //ocultar botones edicion
+    document.getElementsByClassName("log").style.display = "none";
+    //cambiar nombre de botón a login
+    document.getElementById("boton").value = "login";
+    
+};
+
+function Ocultar(){
+    //ocultar formulario login
+    document.getElementsByClassName("log").style.display = "none";
+    //mostrar botones edicion
+    document.getElementsByClassName("log").style.display = "block";
+    //cambiar nombre de botón a logout
+    document.getElementById("boton").value = "logout"
+};
+
+function Login_logout(){
+var log = document.getElementsByClassName("log");
+if (log.style.display === "block"){
+    Ocultar();
+    } else {
+    if (log.style.display === "none"){
+        Mostrar();
+        }
+    }
+}*/
+</script>
