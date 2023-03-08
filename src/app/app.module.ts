@@ -7,10 +7,9 @@ import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SectionComponent } from './components/section/section.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routing';
-
 
 @NgModule({
   declarations: [
@@ -25,7 +24,8 @@ import { AppRoutingModule } from './app.routing';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

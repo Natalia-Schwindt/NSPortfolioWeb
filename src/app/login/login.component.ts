@@ -33,18 +33,8 @@ export class LoginComponent implements OnInit{
         this.loginerror = "";
         this.LoginService.setToken(data.id);
         this.loggedIn = true;
-        //this.router.navigate(['./src/index.html']);
         this.loginButtonText = 'Logout';
       }
     });
     }
   }
-
-  /*function Login_logout() {
-    const login = document.getElementById('log');
-    if (log.style.display === 'none') {
-      log.style.display = 'block';
-    } else {
-      log.style.display = 'none';
-    }
-  }  */

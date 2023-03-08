@@ -1,7 +1,7 @@
 <section>
     <div class="sectionHeader">
         <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
-        <div *ngIf="loggedIn">
+        <div *ngIf="Logged">
             <a href="#" class="log" class="btn-abrir-popup3" id="btn-abrir-popup3"><i class="fa-solid fa-plus"></i></a>
             <a href="#" class="log" class="btn-abrir-popup4" id="btn-abrir-popup4"><i class="fa-solid fa-pencil"></i></a>
             <a href="#" class="log" class="btn-abrir-popup5" id="btn-abrir-popup5"><i class="fa-solid fa-trash-can"></i></a>
@@ -12,12 +12,12 @@
             <div class="popup3" id="popup3">
                 <a href="#" class="btn-cerrar-popup3" id="btn-cerrar-popup3"><i class="fas fa-times"></i></a>
                 <h3>Ingrese los datos a agregar.</h3>
-                <form action="#">
+                <form [formGroup]="form">
                     <div class="contenedor3-inputs">
-                        <input type="text" placeholder="Carrera">
-                        <input type="text" placeholder="Institución">
-                        <input type="text" placeholder="Año">
-                        <input type="text" placeholder="Url del logo">
+                        <input formControlName="carrera" type="text" placeholder="Carrera">
+                        <input formControlName="Institución" type="text" placeholder="Institución">
+                        <input formControlName="Año" type="text" placeholder="Año">
+                        <input formControlName="UrlDelLogo" type="text" placeholder="Url del logo">
                     </div>
                     <input type="submit" class="btn-submit" value="Enviar">
                 </form>
@@ -96,7 +96,7 @@
 <section>
     <div class="sectionHeader">
         <h2><i class="fa-solid fa-laptop-code"></i> Experiencia Laboral</h2>
-        <div *ngIf="loggedIn">
+        <div *ngIf="Logged">
             <a href="#" class="log" class="btn-abrir-popup6" id="btn-abrir-popup6"><i class="fa-solid fa-plus"></i></a>
             <a href="#" class="log" class="btn-abrir-popup7" id="btn-abrir-popup7"><i class="fa-solid fa-pencil"></i></a>
             <a href="#" class="log" class="btn-abrir-popup8" id="btn-abrir-popup8"><i class="fa-solid fa-trash-can"></i></a>
@@ -179,7 +179,7 @@
 <section>
     <div class="sectionHeader">
         <h2><i class="fa-solid fa-users"></i> Hard Skills & Soft Skills</h2>
-        <div *ngIf="loggedIn">
+        <div *ngIf="Logged">
             <a href="#" class="log" class="btn-abrir-popup9" id="btn-abrir-popup9"><i class="fa-solid fa-plus"></i></a>
             <a href="#" class="log" class="btn-abrir-popup10" id="btn-abrir-popup10"><i class="fa-solid fa-pencil"></i></a>
             <a href="#" class="log" class="btn-abrir-popup11" id="btn-abrir-popup11"><i class="fa-solid fa-trash-can"></i></a>
@@ -291,7 +291,7 @@
 <section>
     <div class="sectionHeader">
         <h2><i class="fa-solid fa-code"></i> Proyectos</h2>
-        <div *ngIf="loggedIn">
+        <div *ngIf="Logged">
             <a href="#" class="log" title="e-mail" id="btn-abrir-popup12"><i class="fa-solid fa-plus"></i></a>
             <a href="#" class="log" title="e-mail" id="btn-abrir-popup13"><i class="fa-solid fa-pencil"></i></a>
             <a href="#" class="log" title="e-mail" id="btn-abrir-popup14"><i class="fa-solid fa-trash-can"></i></a>

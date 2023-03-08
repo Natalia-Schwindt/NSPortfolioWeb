@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { LoginService } from 'src/app/login.service';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent implements OnInit {
-    @Input() isLoggedIn: boolean = false;
+export class HeaderComponent {
+    isLoggedIn: boolean;
 
-    constructor() {}
+    constructor(private loginService: LoginService) {
+      this.isLoggedIn = this.loginService.isAuthenticated();
+    }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+      const token = this.loginService.getUserLogged();
+    console.log("Token: ", token);
+    if (token) {
+      this.isLoggedIn = true;
+    }
+  }
 };
 
 
