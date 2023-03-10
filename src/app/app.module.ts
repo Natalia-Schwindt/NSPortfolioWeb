@@ -5,11 +5,14 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SectionComponent } from './components/section/section.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routing';
+import { ExplabComponent } from './components/explab/explab.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,11 @@ import { AppRoutingModule } from './app.routing';
     LoginComponent, 
     FooterComponent,
     NavComponent,
+    EducacionComponent,
     HeaderComponent,
-    SectionComponent
+    ExplabComponent,
+    SkillsComponent,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,

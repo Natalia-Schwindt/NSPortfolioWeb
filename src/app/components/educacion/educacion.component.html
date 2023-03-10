@@ -1,0 +1,95 @@
+<section>
+    <div class="sectionHeader">
+        <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
+        <div *ngIf="Logged">
+            <a href="#" class="log" class="btn-abrir-popup3" id="btn-abrir-popup3"><i class="fa-solid fa-plus"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup4" id="btn-abrir-popup4"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup5" id="btn-abrir-popup5"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+    </div>
+    <div class="contenedor3">
+        <div class="overlay3" id="overlay3">
+            <div class="popup3" id="popup3">
+                <a href="#" class="btn-cerrar-popup3" id="btn-cerrar-popup3"><i class="fas fa-times"></i></a>
+                <h3>Ingrese los datos a agregar.</h3>
+                <form [formGroup]="form">
+                    <div class="contenedor3-inputs">
+                        <input formControlName="carrera" type="text" placeholder="Carrera">
+                        <input formControlName="Institución" type="text" placeholder="Institución">
+                        <input formControlName="Año" type="text" placeholder="Año">
+                        <input formControlName="UrlDelLogo" type="text" placeholder="Url del logo">
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor4">
+        <div class="overlay4" id="overlay4">
+            <div class="popup4" id="popup4">
+                <a href="#" class="btn-cerrar-popup4" id="btn-cerrar-popup4"><i class="fas fa-times"></i></a>
+                <h3>Ingrese los datos a editar.</h3>
+                <form action="#">
+                    <div class="contenedor4-inputs">
+                        <input type="text" placeholder="Carrera">
+                        <input type="text" placeholder="Institución">
+                        <input type="text" placeholder="Año">
+                        <input type="text" placeholder="Url del logo">
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor5">
+        <div class="overlay5" id="overlay5">
+            <div class="popup5" id="popup5">
+                <a href="#" class="btn-cerrar-popup5" id="btn-cerrar-popup5"><i class="fas fa-times"></i></a>
+                <h3>Ingrese el estudio a eliminar.</h3>
+                <form action="#">
+                    <div class="contenedor5-inputs">
+                    <input type="text" placeholder="Carrera">
+                    <input type="text" placeholder="Institución">
+                </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="sectionBody">
+        <div class="card">
+            <h3>Full Stack Developer Junior</h3>
+            <div>
+                <div>
+                    <p>Argentina Programa #Yo Programo</p>
+                    <p>2021 - 2022</p>
+                </div>
+                <a href="https://argentinaprograma.inti.gob.ar/" rel="noopener" target="_blank"><img src="./assets/logoArgentinaPrograma.jpg" alt="argProg"></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Curso de Desarrollo con Stack Mean/Mern</h3>
+            <div>
+                <div>
+                    <p>Talleres Don Web - Online</p>
+                    <p>2022</p>
+                </div>
+                <a href="https://talleres.donweb.com/" rel="noopener" target="_blank"><img src="./assets/logo-talleresdonweb.png" alt="tallDonWeb"></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Soporte Operativo para PC</h3>
+            <div>    
+                <div>
+                    <p>Inst. Sup. de Form. Doc. y Téc. Nº48 - Cnel. Suárez</p>
+                    <p>1999 - 2000</p>
+                </div>
+                <a href="https://isfdyt48-bue.infd.edu.ar/sitio/" rel="noopener" target="_blank"><img src="./assets/logoInstSupNº48.png" alt="institutoNº48"></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+</section>
+<script src="educacion.component.ts"></script>

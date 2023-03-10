@@ -1,0 +1,388 @@
+@use 'src/variables';
+@use 'src/mixins';
+
+.sectionHeader{
+    @include mixins.flexBox(row, space-between);
+    padding: 5px;
+    & h2{
+        font-size: variables.$fontSizeTitleMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeTitleTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeSubTitle;
+            padding-left: 10px;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            margin: 20px 0;
+        }
+    }
+    & a{
+        //display: none;
+    }
+}
+.contenedor6{
+    .overlay6{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .overlay6.active{
+        visibility: visible;
+    }
+    .popup6{
+        background: #f8f8f8;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+        border-radius: 3px;
+        font-family: variables.$fontTitle;
+        padding: 20px;
+        text-align: center;
+        width: 550px;
+        transition: .3s ease all;
+        transform: scale(.7);
+        opacity: 0;
+    }
+    .popup6 .btn-cerrar-popup6{
+        font-size: 18px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        transition: .3s ease all;
+    }
+    .popup6 .btn-cerrar-popup6:hover{
+        color: #000;
+    }
+    .popup6 h3{
+        font-size: 28px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+    .popup6 form .contenedor6-inputs{
+        opacity: 0;
+    }
+    .popup6 form .contenedor6-inputs input{
+        width: 90%;
+        margin-bottom: 15px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+    }
+    .popup6 form .btn-submit{
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #FFF;
+        background: variables.$colorTertiary;
+        border-radius: 3px;
+        font-family: variables.$fontSubTitle;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+    .popup6 form .btn-submit:hover{
+        background: rgba(94,125,227,.9);
+    }
+    .popup6.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .popup6.active h3{
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+    .popup6.active .contenedor6-inputs{
+        animation: entradaInputs 1s ease 1s forwards;
+    }
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        }
+}
+.contenedor7{
+    .overlay7{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .overlay7.active{
+        visibility: visible;
+    }
+    .popup7{
+        background: #f8f8f8;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+        border-radius: 3px;
+        font-family: variables.$fontTitle;
+        padding: 20px;
+        text-align: center;
+        width: 550px;
+        transition: .3s ease all;
+        transform: scale(.7);
+        opacity: 0;
+    }
+    .popup7 .btn-cerrar-popup7{
+        font-size: 18px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        transition: .3s ease all;
+    }
+    .popup7 .btn-cerrar-popup7:hover{
+        color: #000;
+    }
+    .popup7 h3{
+        font-size: 28px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+    .popup7 form .contenedor7-inputs{
+        opacity: 0;
+    }
+    .popup7 form .contenedor7-inputs input{
+        width: 90%;
+        margin-bottom: 15px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+    }
+    .popup7 form .btn-submit{
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #FFF;
+        background: variables.$colorTertiary;
+        border-radius: 3px;
+        font-family: variables.$fontSubTitle;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+    .popup7 form .btn-submit:hover{
+        background: rgba(94,125,227,.9);
+    }
+    .popup7.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .popup7.active h3{
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+    .popup7.active .contenedor7-inputs{
+        animation: entradaInputs 1s ease 1s forwards;
+    }
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        }
+}
+.contenedor8{
+    .overlay8{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .overlay8.active{
+        visibility: visible;
+    }
+    .popup8{
+        background: #f8f8f8;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+        border-radius: 3px;
+        font-family: variables.$fontTitle;
+        padding: 20px;
+        text-align: center;
+        width: 550px;
+        transition: .3s ease all;
+        transform: scale(.7);
+        opacity: 0;
+    }
+    .popup8 .btn-cerrar-popup8{
+        font-size: 18px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        transition: .3s ease all;
+    }
+    .popup8 .btn-cerrar-popup8:hover{
+        color: #000;
+    }
+    .popup8 h3{
+        font-size: 28px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+    .popup8 form .contenedor8-inputs{
+        opacity: 0;
+    }
+    .popup8 form .contenedor8-inputs input{
+        width: 90%;
+        margin-bottom: 15px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+    }
+    .popup8 form .btn-submit{
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #FFF;
+        background: variables.$colorTertiary;
+        border-radius: 3px;
+        font-family: variables.$fontSubTitle;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+    .popup8 form .btn-submit:hover{
+        background: rgba(94,125,227,.9);
+    }
+    .popup8.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .popup8.active h3{
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+    .popup8.active .contenedor8-inputs{
+        animation: entradaInputs 1s ease 1s forwards;
+    }
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        }
+}
+.sectionBody{
+    @include mixins.flexBox(column, center, center);
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        @include mixins.flexBox(row, space-evenly, flex-start);
+    }
+    .card{
+        width: 80%;
+        padding: 20px 0;
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            width: 26%;
+            margin: 15px 0;
+        }
+    }
+    & h3{
+        font-size: variables.$fontSizeSubtitleMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeSubTitleTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeLargeParagraph;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            font-size: variables.$fontSizeSubTitle;
+        }
+    }
+    & p{
+        font-size: variables.$fontSizeParagraphMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeParagraphTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeParagraph;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            font-size: variables.$fontSizeLargeParagraph;
+        }
+    }
+    & img{
+        width: 50px;
+        margin-bottom: 2px;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            width: 70px;
+            margin-top: 2px;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            width: 100px;
+            margin-top: 5px;
+        }
+    }
+}
+hr{
+    background-color: variables.$colorQuinary;
+    width: 90%;
+    height: 2px;
+    margin: 20px auto;
+}

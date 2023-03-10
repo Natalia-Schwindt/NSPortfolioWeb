@@ -1,0 +1,85 @@
+<section>
+    <div class="sectionHeader">
+        <h2><i class="fa-solid fa-code"></i> Proyectos</h2>
+        <div *ngIf="Logged">
+            <a href="#" class="log" title="e-mail" id="btn-abrir-popup12"><i class="fa-solid fa-plus"></i></a>
+            <a href="#" class="log" title="e-mail" id="btn-abrir-popup13"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="log" title="e-mail" id="btn-abrir-popup14"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+    </div>
+    <div class="contenedor12">
+        <div class="overlay12" id="overlay12">
+            <div class="popup12" id="popup12">
+                <a href="#" id="btn-cerrar-popup12" class="btn-cerrar-popup12"><i class="fas fa-times"></i></a>
+                <h3>Ingrese el proyecto a agregar.</h3>                            
+                <form action="#">
+                    <div class="contenedor12-inputs">
+                        <input type="text" placeholder="Nombre">
+                        <input type="text" placeholder="Estado">
+                        <textarea class="mensaje" name="Descripción" rows="5" cols="48" placeholder="Descripción.." required></textarea>
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor13">
+        <div class="overlay13" id="overlay13">
+            <div class="popup13" id="popup13">
+                <a href="#" id="btn-cerrar-popup13" class="btn-cerrar-popup13"><i class="fas fa-times"></i></a>
+                <h3>Ingrese el proyecto a editar.</h3>
+                <form action="#">
+                    <div class="contenedor13-inputs">
+                        <input type="text" placeholder="Nombre">
+                        <input type="text" placeholder="Estado">
+                        <textarea class="mensaje" name="Descripción" rows="5" cols="48" placeholder="Descripción.." required></textarea>
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor14">
+        <div class="overlay14" id="overlay14">
+            <div class="popup14" id="popup14">
+                <a href="#" id="btn-cerrar-popup14" class="btn-cerrar-popup14"><i class="fas fa-times"></i></a>
+                <h3>Ingrese el proyecto a eliminar.</h3>
+                <form action="#">
+                    <div class="contenedor14-inputs">
+                        <input type="text" placeholder="Nombre">
+                        <input type="text" placeholder="Estado">                                    
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="sectionBody">
+        <div class="card">
+            <h3>DCards</h3>
+            <div>
+                <p>(En proceso)</p>
+                <p>Esta es una página de tarjetas electrónicas. No sólo contiene los datos del comercio, sino que además se puede acceder a todos sus productos y comprarlos. Se puede gestionar el envío y pagar.</p>
+                <a href="#" title="DCards"></a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>onlysoncomic.com</h3>
+            <div>
+                <p>(En proceso)</p>
+                <p>Esta es una página de comics. Consta de varias páginas sdonde se puede acceder a los capítulos, material extra y ponerse en contacto con la autora.</p>
+                <a href="#" title="onlysoncomic"></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Recetas para todos los días</h3>
+            <div>
+                <p>(En proceso)</p>
+                <p>Esta es una página de recetas realizadas cotidianamente. Sirve como un recuerdo de recetas sencillas al momento de decidir qué cocinar todos los días. Pueden ver recetas, enviar recetas para que las agregue una vez probadas, o ponerse en contacto conmigo.</p>
+                <a href="#" title="Recetas para todos los días"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="proyectos.component.ts"></script>

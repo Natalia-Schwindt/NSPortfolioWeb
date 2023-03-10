@@ -1,0 +1,400 @@
+@use 'src/variables';
+@use 'src/mixins';
+
+.sectionHeader{
+    @include mixins.flexBox(row, space-between);
+    padding: 5px;
+    & h2{
+        font-size: variables.$fontSizeTitleMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeTitleTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeSubTitle;
+            padding-left: 10px;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            margin: 20px 0;
+        }
+    }
+    & a{
+        //display: none;
+    }
+}
+.contenedor12{
+    .overlay12{
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    }
+.overlay12.active{
+    visibility: visible;
+    }
+.popup12{
+    background: #f8f8f8;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+    border-radius: 3px;
+    font-family: variables.$fontTitle;
+    padding: 20px;
+    text-align: center;
+    width: 550px;
+    transition: .3s ease all;
+    transform: scale(.7);
+    opacity: 0;
+    }
+.popup12 .btn-cerrar-popup12{
+    font-size: 18px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+    }
+.popup12 .btn-cerrar-popup12:hover{
+    color: #000;
+    }
+.popup12 h3{
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    opacity: 0;
+    }
+.popup12 form .contenedor12-inputs{
+    opacity: 0;
+    }
+.popup12 form .contenedor12-inputs input{
+    width: 90%;
+    margin-bottom: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #BBBBBB;
+    }
+.popup12 form .contenedor12-inputs .mensaje{
+    margin-bottom: 15px;
+    font-family: variables.$fontTitle;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 450;
+    color: #575555;
+    padding: 10px 0 0 10px;
+    border: 1px solid #BBBBBB;
+}
+.popup12 form .btn-submit{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #FFF;
+    background: variables.$colorTertiary;
+    border-radius: 3px;
+    font-family: variables.$fontSubTitle;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+    }
+.popup12 form .btn-submit:hover{
+    background: rgba(94,125,227,.9);
+    }
+.popup12.active{
+    opacity: 1;
+    transform: scale(1);
+    }
+.popup12.active h3{
+    animation: entradaTitulo .8s ease .5s forwards;
+    }
+.popup12.active .contenedor12-inputs{
+    animation: entradaInputs 1s ease 1s forwards;
+    }
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        }
+    }
+.contenedor13{
+    .overlay13{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        }
+    .overlay13.active{
+        visibility: visible;
+        }
+    .popup13{
+        background: #f8f8f8;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+        border-radius: 3px;
+        font-family: variables.$fontTitle;
+        padding: 20px;
+        text-align: center;
+        width: 550px;
+        transition: .3s ease all;
+        transform: scale(.7);
+        opacity: 0;
+        }
+    .popup13 .btn-cerrar-popup13{
+        font-size: 18px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        transition: .3s ease all;
+        }
+    .popup13 .btn-cerrar-popup13:hover{
+        color: #000;
+        }
+    .popup13 h3{
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        opacity: 0;
+        }
+    .popup13 form .contenedor13-inputs{
+        opacity: 0;
+        }
+    .popup13 form .contenedor13-inputs input{
+        width: 90%;
+        margin-bottom: 10px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+        }
+    .popup13 form .contenedor13-inputs .mensaje{
+        margin-bottom: 15px;
+        font-family: variables.$fontTitle;
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 450;
+        color: #575555;
+        padding: 10px 0 0 10px;
+        border: 1px solid #BBBBBB;
+    }
+    .popup13 form .btn-submit{
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #FFF;
+        background: variables.$colorTertiary;
+        border-radius: 3px;
+        font-family: variables.$fontSubTitle;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+        }
+    .popup13 form .btn-submit:hover{
+        background: rgba(94,125,227,.9);
+        }
+    .popup13.active{
+        opacity: 1;
+        transform: scale(1);
+        }
+    .popup13.active h3{
+        animation: entradaTitulo .8s ease .5s forwards;
+        }
+    .popup13.active .contenedor13-inputs{
+        animation: entradaInputs 1s ease 1s forwards;
+        }
+}
+@keyframes entradaTitulo {
+        from {
+            transform: translateY(-25px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+            }
+        }
+@keyframes entradaInputs {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+}
+.contenedor14{
+    .overlay14{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .overlay14.active{
+        visibility: visible;
+    }
+    .popup14{
+        background: #f8f8f8;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+        border-radius: 3px;
+        font-family: variables.$fontTitle;
+        padding: 20px;
+        text-align: center;
+        width: 550px;
+        transition: .3s ease all;
+        transform: scale(.7);
+        opacity: 0;
+    }
+    .popup14 .btn-cerrar-popup14{
+        font-size: 18px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        transition: .3s ease all;
+    }
+.popup14 .btn-cerrar-popup14:hover{
+        color: #000;
+    }
+.popup14 h3{
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+.popup14 form .contenedor14-inputs{
+        opacity: 0;
+    }
+.popup14 form .contenedor14-inputs input{
+        width: 90%;
+        margin-bottom: 10px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+    }
+.popup14 form .contenedor14-inputs .mensaje{
+        margin-bottom: 15px;
+        font-family: variables.$fontTitle;
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 450;
+        color: #575555;
+        padding: 10px 0 0 10px;
+        border: 1px solid #BBBBBB;
+    }
+.popup14 form .btn-submit{
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #FFF;
+        background: variables.$colorTertiary;
+        border-radius: 3px;
+        font-family: variables.$fontSubTitle;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+.popup14 form .btn-submit:hover{
+        background: rgba(94,125,227,.9);
+    }
+.popup14.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+.popup14.active h3{
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+.popup14.active .contenedor14-inputs{
+        animation: entradaInputs 1s ease 1s forwards;
+    }
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.sectionBody{
+    @include mixins.flexBox(column, center, center);
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        @include mixins.flexBox(row, space-evenly, flex-start);
+    }
+    .card{
+        width: 80%;
+        padding: 20px 0;
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            width: 26%;
+            margin: 15px 0;
+        }
+    }
+    & h3{
+        font-size: variables.$fontSizeSubtitleMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeSubTitleTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeLargeParagraph;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            font-size: variables.$fontSizeSubTitle;
+        }
+    }
+    & p{
+        font-size: variables.$fontSizeParagraphMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeParagraphTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeParagraph;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            font-size: variables.$fontSizeLargeParagraph;
+        }
+    }
+}

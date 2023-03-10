@@ -1,0 +1,83 @@
+<section>
+    <div class="sectionHeader">
+        <h2><i class="fa-solid fa-laptop-code"></i> Experiencia Laboral</h2>
+        <div *ngIf="Logged">
+            <a href="#" class="log" class="btn-abrir-popup6" id="btn-abrir-popup6"><i class="fa-solid fa-plus"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup7" id="btn-abrir-popup7"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup8" id="btn-abrir-popup8"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+    </div>
+    <div class="contenedor6">
+        <div class="overlay6" id="overlay6">
+            <div class="popup6" id="popup6">
+                <a href="#" class="btn-cerrar-popup6" id="btn-cerrar-popup6"><i class="fas fa-times"></i></a>
+                <h3>Ingrese los datos a agregar.</h3>
+                <form action="#">
+                    <div class="contenedor6-inputs">
+                        <input type="text" placeholder="Empresa">
+                        <input type="text" placeholder="Puesto">
+                        <input type="text" placeholder="Año">
+                        <input type="text" placeholder="Url del logo">
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor7">
+        <div class="overlay7" id="overlay7">
+            <div class="popup7" id="popup7">
+                <a href="#" class="btn-cerrar-popup7" id="btn-cerrar-popup7"><i class="fas fa-times"></i></a>
+                <h3>Ingrese los datos a editar.</h3>
+                <form action="#">
+                    <div class="contenedor7-inputs">
+                        <input type="text" placeholder="Empresa">
+                        <input type="text" placeholder="Puesto">
+                        <input type="text" placeholder="Año">
+                        <input type="text" placeholder="Url del logo">
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor8">
+        <div class="overlay8" id="overlay8">
+            <div class="popup8" id="popup8">
+                <a href="#" class="btn-cerrar-popup8" id="btn-cerrar-popup8"><i class="fas fa-times"></i></a>
+                <h3>Ingrese el trabajo a eliminar.</h3>
+                <form action="#">
+                    <div class="contenedor8-inputs">
+                        <input type="text" placeholder="Empresa">
+                        <input type="text" placeholder="Puesto">
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="sectionBody">
+        <div class="card">
+            <h3>Simplia</h3>
+            <div>
+                <div>
+                    <p>Limpieza en Bancos</p>
+                    <p>2018 - Actualidad</p>
+                </div>
+                <a href="https://www.simpliafacility.com/contacto-facility-solutions/" rel="noopener" target="_blank"><img src="./assets/logoSimplia.png" alt="logoSimplia"></a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Prosegur</h3>
+            <div>
+                <div>
+                    <p>Seguridad Privada</p>
+                    <p>2012 - 2016</p>
+                </div>
+                <a href="https://www.prosegur.com.ar/personas" rel="noopener" target="_blank"><img src="./assets/logoProsegur.png" alt="logoProsegur" bgcolor="yellow"></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+</section>
+<script src="explab.component.ts"></script>

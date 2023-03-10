@@ -1,0 +1,388 @@
+@use 'src/variables';
+@use 'src/mixins';
+
+.sectionHeader{
+    @include mixins.flexBox(row, space-between);
+    padding: 5px;
+    & h2{
+        font-size: variables.$fontSizeTitleMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeTitleTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeSubTitle;
+            padding-left: 10px;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            margin: 20px 0;
+        }
+    }
+    & a{
+        //display: none;
+    }
+}
+.contenedor3{
+    .overlay3{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .overlay3.active{
+        visibility: visible;
+    }
+    .popup3{
+        background: #f8f8f8;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+        border-radius: 3px;
+        font-family: variables.$fontTitle;
+        padding: 20px;
+        text-align: center;
+        width: 550px;
+        transition: .3s ease all;
+        transform: scale(.7);
+        opacity: 0;
+    }
+    .popup3 .btn-cerrar-popup3{
+        font-size: 18px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        transition: .3s ease all;
+    }
+    .popup3 .btn-cerrar-popup3:hover{
+        color: #000;
+    }
+    .popup3 h3{
+        font-size: 28px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+    .popup3 form .contenedor3-inputs{
+        opacity: 0;
+    }
+    .popup3 form .contenedor3-inputs input{
+        width: 90%;
+        margin-bottom: 15px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+    }
+    .popup3 form .btn-submit{
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #FFF;
+        background: variables.$colorTertiary;
+        border-radius: 3px;
+        font-family: variables.$fontSubTitle;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+    .popup3 form .btn-submit:hover{
+        background: rgba(94,125,227,.9);
+    }
+    .popup3.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .popup3.active h3{
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+    .popup3.active .contenedor3-inputs{
+        animation: entradaInputs 1s ease 1s forwards;
+    }
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        }
+}
+.contenedor4{
+    .overlay4{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .overlay4.active{
+        visibility: visible;
+    }
+    .popup4{
+        background: #f8f8f8;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+        border-radius: 3px;
+        font-family: variables.$fontTitle;
+        padding: 20px;
+        text-align: center;
+        width: 550px;
+        transition: .3s ease all;
+        transform: scale(.7);
+        opacity: 0;
+    }
+    .popup4 .btn-cerrar-popup4{
+        font-size: 18px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        transition: .3s ease all;
+    }
+    .popup4 .btn-cerrar-popup4:hover{
+        color: #000;
+    }
+    .popup4 h3{
+        font-size: 28px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+    .popup4 form .contenedor4-inputs{
+        opacity: 0;
+    }
+    .popup4 form .contenedor4-inputs input{
+        width: 90%;
+        margin-bottom: 15px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+    }
+    .popup4 form .btn-submit{
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #FFF;
+        background: variables.$colorTertiary;
+        border-radius: 3px;
+        font-family: variables.$fontSubTitle;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+    .popup4 form .btn-submit:hover{
+        background: rgba(94,125,227,.9);
+    }
+    .popup4.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .popup4.active h3{
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+    .popup4.active .contenedor4-inputs{
+        animation: entradaInputs 1s ease 1s forwards;
+    }
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        }
+}
+.contenedor5{
+    .overlay5{
+        background: rgba(0,0,0,.3);
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .overlay5.active{
+        visibility: visible;
+    }
+    .popup5{
+        background: #f8f8f8;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+        border-radius: 3px;
+        font-family: variables.$fontTitle;
+        padding: 20px;
+        text-align: center;
+        width: 550px;
+        transition: .3s ease all;
+        transform: scale(.7);
+        opacity: 0;
+    }
+    .popup5 .btn-cerrar-popup5{
+        font-size: 18px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        color: #BBBBBB;
+        transition: .3s ease all;
+    }
+    .popup5 .btn-cerrar-popup5:hover{
+        color: #000;
+    }
+    .popup5 h3{
+        font-size: 28px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+    .popup5 form .contenedor5-inputs{
+        opacity: 0;
+    }
+    .popup5 form .contenedor5-inputs input{
+        width: 90%;
+        margin-bottom: 15px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+    }
+    .popup5 form .btn-submit{
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #FFF;
+        background: variables.$colorTertiary;
+        border-radius: 3px;
+        font-family: variables.$fontSubTitle;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+    .popup5 form .btn-submit:hover{
+        background: rgba(94,125,227,.9);
+    }
+    .popup5.active{
+        opacity: 1;
+        transform: scale(1);
+    }
+    .popup5.active h3{
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+    .popup5.active .contenedor5-inputs{
+        animation: entradaInputs 1s ease 1s forwards;
+    }
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+@keyframes entradaInputs {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        }
+}
+.sectionBody{
+    @include mixins.flexBox(column, center, center);
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        @include mixins.flexBox(row, space-evenly, flex-start);
+    }
+    .card{
+        width: 80%;
+        padding: 20px 0;
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            width: 26%;
+            margin: 15px 0;
+        }
+    }
+    & h3{
+        font-size: variables.$fontSizeSubtitleMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeSubTitleTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeLargeParagraph;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            font-size: variables.$fontSizeSubTitle;
+        }
+    }
+    & p{
+        font-size: variables.$fontSizeParagraphMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeParagraphTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeParagraph;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            font-size: variables.$fontSizeLargeParagraph;
+        }
+    }
+    & img{
+        width: 50px;
+        margin-bottom: 2px;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            width: 70px;
+            margin-top: 2px;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            width: 100px;
+            margin-top: 5px;
+        }
+    }
+}
+    hr{
+        background-color: variables.$colorQuinary;
+        width: 90%;
+        height: 2px;
+        margin: 20px auto;
+    }

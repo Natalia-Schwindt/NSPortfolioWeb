@@ -1,0 +1,112 @@
+<section>
+    <div class="sectionHeader">
+        <h2><i class="fa-solid fa-users"></i> Hard Skills & Soft Skills</h2>
+        <div *ngIf="Logged">
+            <a href="#" class="log" class="btn-abrir-popup9" id="btn-abrir-popup9"><i class="fa-solid fa-plus"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup10" id="btn-abrir-popup10"><i class="fa-solid fa-pencil"></i></a>
+            <a href="#" class="log" class="btn-abrir-popup11" id="btn-abrir-popup11"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+    </div>
+    <div class="contenedor9">
+        <div class="overlay9" id="overlay9">
+            <div class="popup9" id="popup9">
+                <a href="#" class="btn-cerrar-popup9" id="btn-cerrar-popup9"><i class="fas fa-times"></i></a>
+                <h3>Ingrese el hard skill a agregar.</h3>
+                <form action="#">
+                    <div class="contenedor9-inputs">
+                        <input type="text" placeholder="Nombre">
+                        <input type="text" placeholder="Porcentaje">
+                        <h3>Ingrese el soft skill a agregar.</h3>
+                        <input type="text" placeholder="Nombre">
+                        <input type="text" placeholder="Porcentaje">
+                        <h3>Ingrese el idioma a agregar.</h3>
+                        <input type="text" placeholder="Idioma">
+                        <input type="text" placeholder="Nivel">
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor10">
+        <div class="overlay10" id="overlay10">
+            <div class="popup10" id="popup10">
+                <a href="#" class="btn-cerrar-popup10" id="btn-cerrar-popup10"><i class="fas fa-times"></i></a>
+                <h3>Ingrese el hard skill a editar.</h3>
+                <form action="#">
+                    <div class="contenedor10-inputs">
+                        <input type="text" placeholder="Nombre">
+                        <input type="text" placeholder="Porcentaje">
+                        <h3>Ingrese el soft skill a editar.</h3>
+                        <input type="text" placeholder="Nombre">
+                        <input type="text" placeholder="Porcentaje">
+                        <h3>Ingrese el idioma a editar.</h3>
+                        <input type="text" placeholder="Idioma">
+                        <input type="text" placeholder="Nivel">
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor11">
+        <div class="overlay11" id="overlay11">
+            <div class="popup11" id="popup11">
+                <a href="#" class="btn-cerrar-popup11" id="btn-cerrar-popup11"><i class="fas fa-times"></i></a>
+                <h3>Ingrese el hard skill a eliminar.</h3>
+                <form action="#">
+                    <div class="contenedor11-inputs">
+                        <input type="text" placeholder="Nombre">
+                        <h3>Ingrese el soft skill a eliminar.</h3>
+                        <input type="text" placeholder="Nombre">                                    
+                        <h3>Ingrese el idioma a eliminar.</h3>
+                        <input type="text" placeholder="Idioma">                                    
+                    </div>
+                    <input type="submit" class="btn-submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="sectionBody">
+        <div class="card">
+            <h3>Hard Skills</h3>
+            <div>
+                <div class="html5"></div>
+                <div class="css3"></div>
+                <div class="sass"></div>
+                <div class="boostrap"></div>
+                <div class="javascript"></div>
+                <div class="typescript"></div>
+                <div class="angular"></div>
+                <div class="mysql"></div>
+                <div class="java"></div>
+                <div class="springboot"></div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Soft Skills</h3>
+            <div>
+                <div class="trabajoEnEquipo"></div>
+                <div class="liderazgo"></div>
+                <div class="comunicacionAsertiva"></div>
+                <div class="atencionAlCliente"></div>
+                <div class="capacidadAnalitica"></div>
+                <div class="atencionAlDetalle"></div>
+                <div class="deseosDeAprender"></div>
+                <div class="adaptabilidad"></div>
+                <div class="scrum"></div>
+            </div>
+        </div>
+        <div class="card">
+            <h3 class="idiomas">Idiomas</h3>
+            <div class="card">
+                <ul type="circle">
+                    <li>Inglés inicial</li>
+                    <li>Ruso inicial</li>
+                </ul>
+            </div>
+        </div>  
+    </div>
+    <hr>
+</section>
+<script src="skills.component.ts"></script>
